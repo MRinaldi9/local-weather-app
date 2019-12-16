@@ -6,6 +6,12 @@
     "deprecation": {
       "severity": "warning"
     },
+    "indent": [
+      true,
+      "tabs",
+      2
+    ],
+    "semicolon": true,
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
