@@ -16,4 +16,11 @@ export class CurrentWeatherComponent implements OnInit {
 			.getCurrentWeather('Rome', 'Italy')
 			.subscribe(data => (this.current = data));
 	}
+
+	getOrdinal(date: number) {
+		const d = new Date(date).getDate();
+		return d > 0
+			? ['th', 'st', 'nd', 'rd'][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
+			: '';
+	}
 }
